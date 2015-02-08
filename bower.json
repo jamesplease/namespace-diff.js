@@ -1,0 +1,24 @@
+{
+  "name": "namespace-diff.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jmeas/namespace-diff.js",
+  "authors": [
+    "Jmeas <jellyes2@gmail.com>"
+  ],
+  "description": "Generate a diff between two namespaces.",
+  "main": "dist/namespace-diff.js",
+  "keywords": [
+    "diff",
+    "difference",
+    "namespace",
+    "algorithm"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
