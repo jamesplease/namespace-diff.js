@@ -63,6 +63,19 @@ describe('Diffing two namespaces', function() {
       });
     });
   });
+
+  describe('that share no similar parts and use some other separator', function() {
+    beforeEach(function() {
+      this.diff = namespaceDiff('books/book', 'pasta/is/good', '/');
+    });
+
+    it('should return a diff up to the root', function() {
+      expect(this.diff).to.deep.equal({
+        outStates: ['book', 'books'],
+        inStates: ['pasta', 'is', 'good']
+      });
+    });
+  });
 });
 
 
