@@ -1,5 +1,5 @@
 {
-  "name": "namespace-diff.js",
+  "name": "namespace-diff",
   "version": "0.0.1",
   "description": "Generate a diff between two namespaces.",
   "main": "dist/namespace-diff.js",
