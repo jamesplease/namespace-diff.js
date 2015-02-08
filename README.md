@@ -9,10 +9,10 @@ Generate a diff between two namespaces.
 
 ### About
 
-A namespace is a series of strings separated by a period. For instance,
-`books.book.comments` and `books.about`. This library can generate the
-difference between two namespaces in terms of *outgoing* parts and
-*incoming* parts.
+A namespace is a series of strings broken up by a separator. For instance,
+`books.book.comments` and `books.about` use a period as a separator.
+This library can generate the difference between two namespaces in terms of
+*outgoing* parts and *incoming* parts.
 
 For instance, given the above namespaces, this library would return:
 
