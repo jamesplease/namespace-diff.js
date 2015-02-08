@@ -55,7 +55,7 @@
   },
   "to5BoilerplateOptions": {
     "destinationFolder": "dist",
-    "exportFileName": "",
+    "exportFileName": "namespace-diff",
     "entryFileName": "namespace-diff",
     "exportVarName": "namespaceDiff",
     "mochaGlobals": ["stub", "spy", "expect"]
