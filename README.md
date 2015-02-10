@@ -18,8 +18,8 @@ For instance, given the above namespaces, this library would return:
 
 ```js
 {
-  outStates: ['comments', 'book'],
-  inStates: ['about']
+  outStates: ['books.book.comments', 'books.book'],
+  inStates: ['books.about']
 }
 ```
 
