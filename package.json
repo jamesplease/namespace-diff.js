@@ -1,6 +1,6 @@
 {
   "name": "namespace-diff",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate the diff between two namespaces.",
   "main": "dist/namespace-diff.js",
   "scripts": {
