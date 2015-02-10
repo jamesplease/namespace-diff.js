@@ -25,13 +25,10 @@ function namespaceDiff(start = '', end = '', sep = '.') {
     }
   }
 
-  var outStates = buildOutput(startStates.slice(i), base, sep);
-  var inStates = buildOutput(endStates.slice(i), base, sep);
-
   // Use that information to generate the result
   return {
-    outStates: outStates.reverse(),
-    inStates: inStates
+    outStates: buildOutput(startStates.slice(i), base, sep).reverse(),
+    inStates: buildOutput(endStates.slice(i), base, sep)
   };
 }
 
