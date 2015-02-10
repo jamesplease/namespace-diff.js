@@ -1,11 +1,11 @@
 {
   "name": "namespace-diff.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/jmeas/namespace-diff.js",
   "authors": [
     "Jmeas <jellyes2@gmail.com>"
   ],
-  "description": "Generate a diff between two namespaces.",
+  "description": "Generate the diff between two namespaces.",
   "main": "dist/namespace-diff.js",
   "keywords": [
     "diff",

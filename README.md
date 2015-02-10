@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/jmeas/namespace-diff.js.svg)](https://david-dm.org/jmeas/namespace-diff.js)
 [![devDependency Status](https://david-dm.org/jmeas/namespace-diff.js/dev-status.svg)](https://david-dm.org/jmeas/namespace-diff.js#info=devDependencies)
 
-Generate a diff between two namespaces.
+Generate the diff between two namespaces.
 
 ### About
 
