@@ -36,3 +36,5 @@ separator defaults to a period.
 
 The outbound array is reversed such that the deepest nested
 part is first in the array.
+
+Values of `undefined` are treated as the root (an empty string).
