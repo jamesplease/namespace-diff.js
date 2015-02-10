@@ -13,15 +13,17 @@
     return outStates;
   }
 
-  function namespaceDiff(start, end) {
+  function namespaceDiff() {
+    var start = arguments[0] === undefined ? "" : arguments[0];
+    var end = arguments[1] === undefined ? "" : arguments[1];
     var sep = arguments[2] === undefined ? "." : arguments[2];
     if (start === end) {
       return { outStates: [], inStates: [] };
     }
 
     // Determine the state up to which they are the same
-    var startStates = start.split(sep);
-    var endStates = end.split(sep);
+    var startStates = start ? start.split(sep) : [];
+    var endStates = end ? end.split(sep) : [];
     var base = "";
     for (var i = 0; i < startStates.length; i++) {
       if (startStates[i] !== endStates[i]) {
