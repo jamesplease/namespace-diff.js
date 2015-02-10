@@ -8,14 +8,14 @@ function buildOutput(outStates, base, sep) {
   return outStates;
 }
 
-function namespaceDiff(start, end, sep = '.') {
+function namespaceDiff(start = '', end = '', sep = '.') {
   if (start === end) {
     return { outStates: [], inStates: [] };
   }
 
   // Determine the state up to which they are the same
-  var startStates = start.split(sep);
-  var endStates = end.split(sep);
+  var startStates = start ? start.split(sep) : [];
+  var endStates = end ? end.split(sep) : [];
   var base = '';
   for (var i = 0; i < startStates.length; i++) {
     if (startStates[i] !== endStates[i]) {
