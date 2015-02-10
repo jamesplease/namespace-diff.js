@@ -19,8 +19,8 @@ describe('Diffing two namespaces', function() {
 
     it('should return a diff up to the root', function() {
       expect(this.diff).to.deep.equal({
-        outStates: ['book', 'books'],
-        inStates: ['pasta', 'is', 'good']
+        outStates: ['books.book', 'books'],
+        inStates: ['pasta', 'pasta.is', 'pasta.is.good']
       });
     });
   });
@@ -32,8 +32,8 @@ describe('Diffing two namespaces', function() {
 
     it('should return a diff up to the root', function() {
       expect(this.diff).to.deep.equal({
-        outStates: ['book'],
-        inStates: ['comments', 'author']
+        outStates: ['books.book'],
+        inStates: ['books.comments', 'books.comments.author']
       });
     });
   });
@@ -45,7 +45,7 @@ describe('Diffing two namespaces', function() {
 
     it('should return an empty array for in, and the correct out states', function() {
       expect(this.diff).to.deep.equal({
-        outStates: ['author', 'comments'],
+        outStates: ['books.book.comments.author', 'books.book.comments'],
         inStates: []
       });
     });
@@ -59,7 +59,7 @@ describe('Diffing two namespaces', function() {
     it('should return an empty array for out, and the correct in states', function() {
       expect(this.diff).to.deep.equal({
         outStates: [],
-        inStates: ['comments', 'author']
+        inStates: ['books.book.comments', 'books.book.comments.author']
       });
     });
   });
@@ -71,8 +71,8 @@ describe('Diffing two namespaces', function() {
 
     it('should return a diff up to the root', function() {
       expect(this.diff).to.deep.equal({
-        outStates: ['book', 'books'],
-        inStates: ['pasta', 'is', 'good']
+        outStates: ['books/book', 'books'],
+        inStates: ['pasta', 'pasta/is', 'pasta/is/good']
       });
     });
   });
