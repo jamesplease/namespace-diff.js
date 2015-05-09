@@ -108,10 +108,23 @@ describe('Diffing two namespaces', function() {
       this.diff = namespaceDiff(undefined, 'pasta.is.good');
     });
 
-    it('should return a diff that does not include the root', function() {
+    it('should return a diff that includes the root', function() {
       expect(this.diff).to.deep.equal({
         outStates: [],
-        inStates: ['pasta', 'pasta.is', 'pasta.is.good']
+        inStates: ['', 'pasta', 'pasta.is', 'pasta.is.good']
+      });
+    });
+  });
+
+  describe('where the start is undefined, and the end is an empty string', function() {
+    beforeEach(function() {
+      this.diff = namespaceDiff(undefined, '');
+    });
+
+    it('should return the root', function() {
+      expect(this.diff).to.deep.equal({
+        outStates: [],
+        inStates: ['']
       });
     });
   });
@@ -121,9 +134,9 @@ describe('Diffing two namespaces', function() {
       this.diff = namespaceDiff('candy.is.good', undefined);
     });
 
-    it('should return a diff that does not include the root', function() {
+    it('should return an empty diff', function() {
       expect(this.diff).to.deep.equal({
-        outStates: ['candy.is.good', 'candy.is', 'candy'],
+        outStates: [],
         inStates: []
       });
     });
