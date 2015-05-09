@@ -28,7 +28,7 @@ For instance, given the above namespaces, this library would return:
 #### namespaceDiff(start, end, separator = '.')
 
 Generates the difference of `start` and `end`. Returns
-an object with two keys, `out` and `in`.
+an object with two keys, `outStates` and `inStates`.
 
 Optionally pass a separator to handle namespaces formatted
 differently. E.g.; `this/namespace/uses/slashes`. The
@@ -37,4 +37,11 @@ separator defaults to a period.
 The outbound array is reversed such that the deepest nested
 part is first in the array.
 
-Values of `undefined` are treated as the root (an empty string).
+### Undefined values
+
+Attempting to enter an `undefined` state is a no-op; the `outStates`
+and `inStates` will be an empty array.
+
+Leaving an `undefined` state and moving into a new state will include
+entering the root state, `''`. This is the only time that the root
+state will be entered.
